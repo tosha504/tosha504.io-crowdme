@@ -1,0 +1,164 @@
+.header {
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  &.sticky {
+    background: rgba(255, 255, 255, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    z-index: 100;
+    a {
+      color: #000;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+      // display: none;
+      display: flex;
+      padding: 50px 0;
+      background: $accentColor;
+      position: fixed;
+      right: -100%;
+      top: 0;
+      bottom: 0;
+      z-index: 20;
+      text-align: center;
+      flex-direction: column;
+      overflow: auto;
+      transition: all 0.5s ease 0s;
+
+      a {
+        margin: 10px 0;
+      }
+      &.active {
+        right: 0;
+
+        // overflow: auto;
+        @media (max-width: 992px) {
+          width: 80%;
+        }
+        @media (max-width: 776px) {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    color: #6666667e;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: $accentColor;
+      width: 0;
+      height: 3px;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__btn {
+    font-size: 13px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 100px;
+    border-radius: 18px;
+    margin-left: auto;
+    margin-right: 15px;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  &__burger {
+    z-index: 21;
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      top: 8px;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: #000;
+    }
+    &:after {
+      position: absolute;
+      bottom: 8px;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: #000;
+    }
+
+    &.active {
+      transform: rotate(-40deg);
+      &:before {
+        opacity: 0;
+      }
+      &::after {
+        transform: rotate(85deg);
+        bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .header {
+    &__burger {
+      display: block;
+    }
+
+    &__link {
+      color: #fff;
+      opacity: 0.7;
+      &:not(:last-child) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    &__btn {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+  }
+}

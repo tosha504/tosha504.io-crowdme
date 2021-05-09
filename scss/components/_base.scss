@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+  &.fixed-page {
+    overflow: hidden;
+  }
+}
+.container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+ul {
+  list-style: none;
+}
+a,
+a:active,
+a:hover {
+  outline: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+button,
+button:active,
+button:focus,
+button:hover,
+input,
+input:active,
+input:focus,
+input:hover,
+textarea,
+textarea:focus {
+  outline: none;
+  background: $accentColor;
+  border: none;
+}
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slick-arrow {
+  width: 13px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  &.slick-prev {
+    background: url("/img/Shape4.svg");
+    left: 80%;
+  }
+  &.slick-next {
+    background: url("/img/Shape3.svg");
+    right: 15%;
+  }
+  @media (max-width: 992px) {
+    opacity: 0;
+  }
+}
+
+.arrowUp {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: $accentColor;
+  cursor: pointer;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 19;
+
+  &.active {
+    display: flex;
+  }
+}
