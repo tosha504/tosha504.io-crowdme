@@ -1,13 +1,6 @@
 .first-screen {
   text-align: center;
 
-  &__screen {
-    background: url("../img/bgmain.jpg") no-repeat center top/cover;
-    padding: 156px 0;
-    position: relative;
-    text-align: center;
-  }
-
   &__title {
     max-width: 900px;
     font-size: 49px;
@@ -44,12 +37,12 @@
 
   &__slide_1 {
     padding: 200px 0;
-    background: url("/img/bgmain.jpg") no-repeat center top/cover;
+    background: url("../img/s2.jpg") no-repeat center top/cover;
   }
 
   &__slide_2 {
     padding: 320px 0;
-    background: url("/img/s2.jpg") no-repeat center top/cover;
+    background: url("../img/s2.jpg") no-repeat center top/cover;
     @media (max-width: 772px) {
       padding: 270px 0;
     }
@@ -207,6 +200,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    &__img {
+      width: 400px;
+      @media (max-width: 500px) {
+        width: 300px;
+      }
+    }
   }
 
   &__browse-text {
@@ -215,7 +214,7 @@
 
   &__browse-title {
     font-size: 25px;
-    color: var(--primery);
+    color: $accentColor;
     font-weight: 400;
     margin-bottom: 30px;
   }
@@ -738,6 +737,9 @@
       max-width: 187px;
       font-size: 13px;
       padding: 9px;
+    }
+    &__right {
+      padding-left: 20px;
     }
 
     &__right &__btn {
