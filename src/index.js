@@ -56,8 +56,8 @@ $(document).ready(function() {
 
   $(".slick-arrow").html("");
 
-  // $slider.fadeOut().fadeIn(3000);
-  // $header.hide().show(2000);
+  $slider.fadeOut().fadeIn(2000);
+  $header.hide().show(2500);
 
   $(window).on(
     "scroll",
