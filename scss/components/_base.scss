@@ -67,11 +67,11 @@ img {
   z-index: 10;
 
   &.slick-prev {
-    background: url("/img/Shape4.svg");
+    background: url("../img/Shape4.svg");
     left: 80%;
   }
   &.slick-next {
-    background: url("/img/Shape3.svg");
+    background: url("../img/Shape3.svg");
     right: 15%;
   }
   @media (max-width: 992px) {
@@ -79,7 +79,40 @@ img {
   }
 }
 
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  li {
+    background: #add136;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: 0.3;
+    cursor: pointer;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+.new-slider {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+
+  &__slide {
+    padding: 0 20px;
+  }
+}
+
 .arrowUp {
+  font-size: 35px;
   display: none;
   justify-content: center;
   align-items: center;

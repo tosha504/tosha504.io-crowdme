@@ -36,8 +36,8 @@
         </div>
       </div>
     </header>
- <div class="arrowUp">UP	
-   <!-- &#8679; -->
+ <div class="arrowUp">
+   &#8679;
 </div>
     <section id="home" class="first-screen">
           <div class="first-screen slider">
@@ -55,11 +55,10 @@
                 <div class="dialog">
                   <div class="container">
                     <div class="dialog__overlay"></div>
-                    <div class="dialog__content">Тут собственно должна быть какая-то наверное реклама..или чтото в этом роде. Но я начинающий волшебник поэтому тут только магия которая доступна только волшебникам и волшебницам моего и выше моего уровня чародейства</div>
+                    <div class="dialog__content">W rzeczywistości powinna być jakaś reklama..albo coś w tym rodzaju. Ale jestem początkującym czarodziejem, więc jest tylko magia, która jest dostępna tylko dla czarodziejów i czarodziejek moich i powyżej mojego poziomu magii</div>
                         
                   </div>
                 </div>
-                <!-- <button class="open-dialog-btn btn">Magic</button> -->
 
     <section id="work" class="work">
       <div class="container">
@@ -144,20 +143,49 @@
 
     <section id="proj" class="projects">
       <div class="container">
-        <div class="project__head">
-          <div class="project__text">
+        <div class="projects__head">
+          <div class="projects__text">
             <h2>Featured Projects</h2>
             <p>
               Brief details of new and popular projects. To view full listings,
               you will be required to sign up and become a member.
             </p>
           </div>
-          <div class="project__button">
+          <button class="projects__button btn">
             <a href="#">Become a Member</a>
-          </div>
+          </button>
         </div>
-        <div class="projects__wrap">
-          <div class="projects__cards">
+
+<div class="new-slider projects__wrap">
+  <div class="new-slider__slide">
+     <div class="projects__cards">
+            <div class="projects__card">
+              <div class="projects__image">
+                <img src="./img/2.jpg" alt="Ontario Tower , LONDON" />
+                <div class="projects__badge">New</div>
+                <div class="projects__price__pink projects__price">
+                  <p>From <b> GBP 3600</b></p>
+                </div>
+              </div>
+              <div class="projects__content">
+                <h6 class="projects__card-title">Ontario Tower , LONDON</h6>
+                <p class="projects__card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="projects__prgress__big"></div>
+                <div class="projects__info">
+                  <div class="projects__stats">60% Funded</div>
+                  <div class="projects__stats">8 Days Left</div>
+                </div>
+                <hr />
+                <a href="#" class="projects__details">See Project Details</a>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="new-slider__slide">
+     <div class="projects__cards">
             <div class="projects__card">
               <div class="projects__image">
                 <img src="./img/card1.jpg" alt="Ontario Tower , LONDON" />
@@ -181,40 +209,15 @@
               </div>
             </div>
           </div>
-
-          <div class="projects__cards">
-            <div class="projects__card">
-              <div class="projects__image">
-                <img src="./img/2.jpg" alt="Ontario Tower , LONDON" />
-                <div class="projects__badge">New</div>
-                <div class="projects__price__pink projects__price">
-                  <p>From <b> GBP 3600</b></p>
-                </div>
-              </div>
-
-              <div class="projects__content">
-                <h6 class="projects__card-title">Ontario Tower , LONDON</h6>
-                <p class="projects__card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <div class="projects__prgress__big"></div>
-                <div class="projects__info">
-                  <div class="projects__stats">60% Funded</div>
-                  <div class="projects__stats">8 Days Left</div>
-                </div>
-                <hr />
-                <a href="#" class="projects__details">See Project Details</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects__cards">
+  </div>
+  
+  <div class="new-slider__slide">
+      <div class="projects__cards">
             <div class="projects__card">
               <div class="projects__image">
                 <img src="./img/card1.jpg" alt="Ontario Tower , LONDON" />
                 <div class="projects__badge">New</div>
-                <div class="projects__price_brown projects__price">
+                <div class="projects__price__brown projects__price">
                   From <b> GBP 3600</b>
                 </div>
               </div>
@@ -236,7 +239,11 @@
             </div>
           </div>
         </div>
-      </div>
+    
+  </div>
+ 
+</div>
+
     </section>
 
     <section id="blog" class="part">

@@ -6,17 +6,62 @@ $(document).ready(function() {
   const $body = $("body");
   const $headerLink = $(".header__link");
   const $arrow = $(".arrowUp");
+  const $newSlider = $(".new-slider");
 
   $(".slider").slick({});
 
+  const newSliderSettings = {
+    slidesToShow: 2,
+    arrows: false,
+    dots: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: "unslick",
+      },
+
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          centerPadding: "0px",
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          centerMode: true,
+          centerPadding: "px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  $(window).on("resize", function() {
+    if ($(this).width() < 992 && !$newSlider.hasClass("slick-initialized")) {
+      $newSlider.slick(newSliderSettings);
+    }
+  });
+
   $(".slick-arrow").html("");
 
-  $slider.fadeOut().fadeIn(3000);
-  $header.hide().show(2000);
+  // $slider.fadeOut().fadeIn(3000);
+  // $header.hide().show(2000);
 
   $(window).on(
     "scroll",
-    $.debounce(200, function() {
+    $.debounce(0, function() {
       if ($(this).scrollTop() > 20) {
         $header.addClass("sticky");
         $arrow.addClass("active");
@@ -24,8 +69,6 @@ $(document).ready(function() {
         $header.removeClass("sticky");
         $arrow.removeClass("active");
       }
-
-      console.log($(this).scrollTop());
     })
   );
 
